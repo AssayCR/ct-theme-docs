@@ -1,0 +1,108 @@
+HTML
+```
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header card-header-icon card-header-rose">
+                    <div class="card-icon">
+                      <i class="material-icons">assignment</i>
+                    </div>
+                    <h4 class="card-title ">Simple Table</h4>
+                  </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                          <table class="table">
+                                  <thead class="text-primary">
+                                      <tr>
+                                        <th *ngFor="let cell of tableData1.headerRow">{{ cell }}</th>
+                                      </tr>
+                                  </thead>
+                                <tbody>
+                                    <tr *ngFor="let row of tableData1.dataRows">
+                                        <td>{{row[0]}}</td>
+                                        <td>{{row[1]}}</td>
+                                        <td>{{row[2]}}</td>
+                                        <td class="text-primary">{{row[3]}}</td>
+
+                                    </tr>
+                                </tbody>
+                          </table>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card card-plain">
+                      <div class="card-header card-header-icon card-header-rose">
+                        <div class="card-icon">
+                          <i class="material-icons">assignment</i>
+                        </div>
+                        <h4 class="card-title mt-0"> Table on Plain Background</h4>
+                        <p class="card-category"> Here is a subtitle for this table</p>
+                      </div>
+                        <div class="card-body">
+                          <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                      <th *ngFor="let cell of tableData2.headerRow">{{ cell }}</th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                      <tr *ngFor="let row of tableData2.dataRows">
+                                          <td *ngFor="let cell of row">{{cell}}</td>
+                                      </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card">
+                      <div class="card-header card-header-icon card-header-rose">
+                        <div class="card-icon">
+                          <i class="material-icons">assignment</i>
+                        </div>
+                        <h4 class="card-title "> Regular Table with Colors</h4>
+                      </div>
+                        <div class="card-body table-full-width">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                          <th *ngFor="let cell of tableData3.headerRow">{{ cell }}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                          <tr class="table-success">
+                                              <td *ngFor="let cell of tableData3.dataRows[0]">{{cell}}</td>
+                                          </tr>
+                                          <tr>
+                                              <td *ngFor="let cell of tableData3.dataRows[1]">{{cell}}</td>
+                                          </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+ts
+```
+tableData1 = {
+    dataRows:[["Naresh",36],["Suresh",23]],
+    headerRow:["name","age"]
+
+  }
+```
